@@ -1,0 +1,21 @@
+*{
+    gap: 0px;
+}
+div{
+    height: 0 auto;
+    width: 0 auto;
+    background: darkgray;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+table, td{
+    border: 3px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    height: 80px;
+    width: 80px;
+}
