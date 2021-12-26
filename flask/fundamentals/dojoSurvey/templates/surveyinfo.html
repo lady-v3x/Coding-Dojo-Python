@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/surveyinfo.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Submitted Dojo Survey Info</h1>
+        <div class="name">
+            <span class="prefix">Name: </span><label class="info">{{ name }}</label>               
+        </div>
+        <div class="location">
+            <span class="prefix">Dojo Location: </span><label class="info">{{ location }}</label>
+        </div>
+        <div class="fav_lang">
+            <span class="prefix">Favorite Language: </span><label class="info">{{ favLang }}</label>
+        </div>
+        <div class="comment">
+            <span class="prefix">Comment: </span><label class="info">{{ comment }}</label>
+        </div>
+        <form class="button" action="/" method="post">
+            <div id="btn"><button class="backbtn">Go Back</button></div>
+        </form>
+    </div>
+</body>
+</html>

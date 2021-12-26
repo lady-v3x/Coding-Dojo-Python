@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dojosurvey.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form">
+        <form action="/result" method="post">
+            <div class="name">
+                <label for="fullname"><b><u>Your Name: </u></b></label>
+                <input type="text" placeholder="Enter Name Here" name="name" id="name" required>
+            </div>
+            <div class="location">
+                <label for="location"><b><u>Dojo Location: </u></b></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Portland"><u>Portland</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Denver"><u>Denver</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Los Angeles"><u>Los Angeles</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Silicon Valley"><u>Silicon Valley</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Washington D.C"><u>Washington D.C</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Chicago"><u>Chicago</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Tulsa"><u>Tulsa</u></label>
+                <br>
+                <input type="radio" name="location" id="location" value="Online"><u>Online</u></label>
+            </div>
+            <div class="favLang">
+                <label for="favLang"><b><u>Favorite Language: </u></b></label>
+                <br>
+                <input type="checkbox" name="favLang" id="favLang" value="C/C++"><label><u>C/C++</u></label>
+                <br>
+                <input type="checkbox" name="favLang" id="favLang" value="Python"><label><u>Python</u></label>
+                <br>
+                <input type="checkbox" name="favLang" id="favLang" value="JavaScript"><label><u>JavaScript</u></label>
+                <br>
+                <input type="checkbox" name="favLang" id="favLang" value="PHP"><label><u>PHP</u></label>
+                <br>
+                <input type="checkbox" name="favLang" id="favLang" value="Ruby"><label><u>Ruby</u></label>
+                <br>
+                <input type="checkbox" name="favLang" id="favLang" value="Other"><label><u>Other (Please specify below)</u></label>
+            </div>
+            <div>
+                <label for="comment" id="comment_label"><b><u>Comment (optional):</u></b></label>
+                <textarea class="commentbox" type="text" placeholder="Please submit any other information that may be relative to the Dojo Survey..." name="comment" id="comment" required></textarea>
+            </div>
+            <div id="subbtn"><button id="submit">Submit</button></div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

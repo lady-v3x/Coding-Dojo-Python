@@ -1,0 +1,62 @@
+/* * {
+    margin: 0px auto;
+    padding: 0px;
+}*/
+
+.wrapper {
+    padding: 40px;
+    width: 500px;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: 375px;
+    background-color: gray;
+    border-radius: 5%;
+}
+
+div.form {
+    margin-left: 2px;
+    border-radius: 10%;
+    border: 3px solid aquamarine;
+}
+
+#submit {
+    width: 150px;
+    height: 35px;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+#subbtn {
+    display: flex;
+    justify-content: center;
+}
+
+#commentbox {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#favLang {
+    cursor: pointer;
+}
+
+textarea {
+    width: 450px;
+    height: 150px;
+}
+
+div div, div label {
+    padding: 8px;
+}
+
+span {
+    padding: 10px;
+    display: block;
+    text-align: right
+}
+
+#comment_label {
+    display: block;
+}

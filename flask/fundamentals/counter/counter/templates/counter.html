@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/counter.css') }}">
+</head>
+<body>
+    <div>
+        <h1>Click and Count!</h1>
+        <h3>You have visited this page <u>{{number}}</u> time(s)!</h3>
+        <div id="btns">
+        <form action="/add" method="post">
+            <button id="add">Refresh Me!</button>
+        </form>
+        <form action="/clear" method="post">
+            <button id="clear">Reset Me!</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

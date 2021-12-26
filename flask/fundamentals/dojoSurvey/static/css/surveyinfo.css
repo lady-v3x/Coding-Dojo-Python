@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px auto;
+    width: 700px;
+    height: 310px;
+    font-size: 18px;
+    font-family: monospace;
+    border: 3px solid black;
+    background-color: blueviolet;
+    border-radius: 10%;
+}
+
+div div{
+    padding: 5px;
+    margin-left: 25px;
+    border: 2px solid dodgerblue;
+    border-radius: 10%;
+    width: 640px;
+    margin-bottom: 2px;
+}
+
+label.info {
+margin:40px;
+}
+
+span {
+    display: inline-block;
+    margin: 2px;
+    text-decoration: underline;
+}
+
+button.backbtn {
+    padding: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    height: 30px;
+    background-color: hotpink;
+    font-family: monospace;
+    border: 2px solid black;
+    justify-content: center;
+    cursor: pointer;
+}
+div#btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-decoration: underline;
+    text-align: center;
+}
