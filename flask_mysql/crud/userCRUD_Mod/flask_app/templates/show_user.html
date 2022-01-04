@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/show.css') }}">
+</head>
+<body>
+    <div class="show">
+    <h1>User {{user.id}}</h1>
+    <p id="fN"><b>First Name:</b></p><p class="info">{{user.first_name}}</p>
+    <p id="lN"><b>Last Name:</b></p> <p class="info">{{user.last_name}}</p>
+    <p id="eM"><b>Email:</b></p> <p class="info">{{user.email}}</p>
+    <br>
+    <h3><a href="/edit/{{ user.id }}">Edit</a> | <a href="/user/destroy/{{ user.id }}">Delete</a> | <a href="/">Home</a></h3>
+    </div>
+</body>
+</html>

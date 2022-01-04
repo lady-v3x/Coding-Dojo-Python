@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Create New User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/create.css') }}">
+</head>
+<body>
+    <div class="create">
+    <h1>Create New User</h1>
+    <form action="/process" method="POST">
+        <label class="fN" for="first_name"><b>First Name: </b></label>
+        <input type="text" name="fName"><br>
+        <br>
+        <label class="lN" for="last_name"><b>Last Name: </b></label>
+        <input type="text" name="lName"><br>
+        <br>
+        <label class="eM" for="email"><b>E-mail: </b></label>
+        <input type="text" name="email"><br>
+        <br>
+        <input class="add" type="submit" value="Add User">
+    </form>
+    <h3><a href="/">Home</a></h3>
+    </div>
+</body>
+</html>

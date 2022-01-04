@@ -1,0 +1,27 @@
+.uTable {
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: ghostwhite;
+}
+table {
+    padding: 5px;
+}
+th {
+    padding: 5px;
+    border: 1px solid black;
+}
+tr td {
+    border: 1px solid black;
+    padding: 10px;
+}
+.btn {
+    border: 1px;
+    color: darkred;
+    margin-left: 620px;
+}
+h1 {
+    color: darkred;
+    margin-left: 560px;
+}
