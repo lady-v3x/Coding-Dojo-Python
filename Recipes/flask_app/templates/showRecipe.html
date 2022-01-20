@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Recipe</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        <a class="links" href="/dashboard">Dashboard</a>
+        <a class="links" href="/logout">Log Out</a>
+    </div>
+    <hr>
+    <div class="center">
+        <h1>Welcome, {{user.firstName}} {{user.lastName}} !</h1>
+        <div class="recipeDeets">
+            <h2 class="name">Recipe: {{recipe.name}}</h2>
+            <div id="descript">
+                <h4>Description: </h4>
+                <p>{{recipe.description}}</p>
+            </div>
+            <div id="instruct">
+                <h4>Instructions: </h4>
+                <p>{{recipe.instructions}}</p>
+            </div>
+            <div id="mins">
+                <h4>Under 30 Minutes?: </h4>
+                {% if recipe.under30 == 1 %}
+                    <p>Yes</p>
+                {% else %}
+                    <p>No</p>
+                {% endif %}
+            </div>
+            <div id="created">
+                <h4>Date Made: </h4>
+                <p>{{recipe.madeOn}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

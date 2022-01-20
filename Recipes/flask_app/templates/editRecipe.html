@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipe</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="nav">
+        <a class="links" href="/dashboard">Dashboard</a>
+        <a class="links" href="/logout">Log Out</a>
+    </div>
+    <hr>
+    <div class="wrapper">
+        <div class="center">
+        <h1>Edit Recipe</h1>
+            <form action="/update/recipe" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="{{edit.name}}">
+                    <br>
+                    <label for="description">Description:</label>
+                    <textarea name="description">{{edit.description}}</textarea>
+                    <br>
+                    <label for="instructions">Instructions:</label>
+                    <textarea name="instructions">{{edit.instructions}}</textarea>
+                    <br>
+                    <label for="madeOn">Date Made:</label>
+                    <input type="date" name="madeOn" value="{{edit.madeOn.strftime('%Y-%m-%d')}}" class="form-control">
+                    <br>
+                    <label for="under30">Under 30 Minutes?:</label>
+                    <br>
+                    <input type="radio" name="under30" value="0" id="under30_0" {% if edit.under30 == 0: %} checked {% endif %}>
+                    <label for="under30_0">No</label>
+                    <br>
+                    <input type="radio" name="under30" value="1" id="under30_1" {% if edit.under30 == 1: %} checked {% endif %}>
+                    <label for="under30_1">Yes</label>
+                    <br>
+                    <input type="hidden" name="id" value="{{edit.id}}">
+                    <div class="btn">
+                    <input type="submit" value="Edit Recipe">
+                    </div>
+            </form>
+        </div>
+        <div class="center">
+            {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+            {% if messages %}
+                <hr>                            <!-- check if there are any messages -->
+                <h2 class="errors">Error(s):</h2>
+                    {% for message in messages %}            <!-- loop through the messages -->
+                        <p class="errors">{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+</html>

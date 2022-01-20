@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: rgb(10, 4, 66); */
+    color: rgb(185, 41, 241);
+    font-size: medium;
+}
+
+body {
+    background-color: rgb(10, 4, 66); 
+    padding: 15px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 10px;
+    vertical-align: top;
+}
+
+h3 {
+    margin: 23px;
+    font-size: larger;
+}
+
+.recipetable {
+    display: inline-flex;
+    padding: 7px;
+    margin: 5px;
+}
+
+table, tr, tbody, td, th, thead {
+    border: 2px solid rgba(244, 242, 245, 0.945);
+    padding: 7px;
+}
+
+
+.nav {
+    height: 40px;
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: flex-end;
+}
+
+.links {
+    display: inline-block;
+    margin: 20px 10px 0px 0px;
+}
+
+#indexforms {
+    display: flex;
+    flex-wrap: nowrap row;
+    justify-content: space-around;
+}
+
+div.btn input {
+    margin: 0px auto;
+    display: flex;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0px auto;
+}
+
+h1 {
+    padding-top: 15px;
+    margin: 10px 10px 35px 0px;
+    font-size: x-large;
+}
+
+h2.name {
+    margin-left: 10px;
+}
+
+.recipeDeets {
+    border: 2px solid rgba(244, 242, 245, 0.945);
+    margin: 7px;
+    width: 600px;
+}
+
+h2 {
+    margin: 10px 10px 10px 0px;
+    font-size: larger;
+}
+
+.errors {
+    color: mediumvioletred;
+}
+
+h2.errors {
+    font-style: italic;
+}
+
+p.errors {
+    margin-left: 5px;
+}
+
+.center {
+    width: fit-content;
+    margin: 0px auto;
+}
+
+hr {
+    margin: 20px auto 15px auto;
+}
+
+.line {
+    width: 80%;
+}
+
+p {
+    margin: 2px;
+}
+
+#descript, #instruct, #mins, #created {
+    border: 2px solid rgba(244, 242, 245, 0.945);
+    padding: 7px;
+    margin: 7px;
+}

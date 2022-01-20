@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="wrapper" id="indexforms">
+        <div>
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                <label for "firstName">First Name:</label>
+                <input type="text" name="firstName"><br>
+                <label for "lastName">Last Name:</label>
+                <input type="text" name="lastName"><br>
+                <label for "email">Email:</label>
+                <input type="text" name="email"><br>
+                <label for "pw">Password:</label>
+                <input type="password" name="pw"><br>
+                <label for "pwConfirm">Confirm Password:</label>
+                <input type="password" name="pwConfirm"><br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div>
+            <h1>Log In</h1>
+            <form action="/login" method='post'>
+                <label for "email">Email:</label>
+                <input type="text" name="email"><br>
+                <label for "pw">Password:</label>
+                <input type="password" name="pw"><br>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+    </div>
+        <div class="center">
+            {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+            {% if messages %}
+                <hr>                            <!-- check if there are any messages -->
+                <h2 class="errors">Error(s):</h2>
+                    {% for message in messages %}            <!-- loop through the messages -->
+                        <p class="errors">{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+</body>
+</html>
